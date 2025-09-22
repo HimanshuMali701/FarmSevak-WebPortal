@@ -145,10 +145,10 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
                 <img
-                  src="src/assets/FarmSevak11.jpg"
-                  alt="FarmSevak Logo"
-                  className="w-10 h-10 rounded-lg object-cover"
-                />
+                src={farmSevakLogo}
+                alt="FarmSevak Logo"
+                className="w-10 h-10 rounded-lg object-cover"
+              />
                 <span className="font-poppins font-bold text-xl">FarmSevak</span>
               </div>
               <p className="text-primary-foreground/80 max-w-md">
