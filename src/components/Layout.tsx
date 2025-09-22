@@ -126,7 +126,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                   )
                 )}
                 <div className="pt-2 border-t border-border">
-                  <Button className="btn-primary w-full">Try Demo</Button>
+                  <a
+                href="https://farmsevak.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary px-4 py-2 rounded-lg text-white font-medium transition-transform hover:scale-105"
+              ></a>
+                  <Button className="btn-primary w-full">🤖SevakBot</Button>
                 </div>
               </div>
             </div>
