@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI Crop Yield Prediction Design System */
+
+@layer base {
+  :root {
+    /* AI Crop Brand Colors */
+    --primary: 147 50% 36%;           /* #2E8B57 Sea Green */
+    --primary-foreground: 147 33% 97%; /* #F7FBF8 Light Green */
+    --primary-dark: 147 60% 25%;      /* Darker primary for depth */
+    --primary-light: 147 40% 50%;     /* Lighter primary for hover */
+
+    --accent: 39 100% 64%;            /* #FFB547 Orange */
+    --accent-foreground: 213 46% 10%; /* #0F1724 Dark Blue */
+    --accent-dark: 39 100% 55%;       /* Darker accent */
+    --accent-light: 39 100% 75%;      /* Lighter accent */
+
+    --background: 147 33% 97%;        /* #F7FBF8 Light Green Background */
+    --foreground: 213 46% 10%;        /* #0F1724 Dark Blue Text */
+
+    --card: 0 0% 100%;                /* Pure white cards */
+    --card-foreground: 213 46% 10%;   /* Dark blue text on cards */
+
+    --secondary: 147 20% 90%;         /* Subtle green secondary */
+    --secondary-foreground: 213 46% 10%;
+
+    --muted: 147 15% 85%;             /* Muted green */
+    --muted-foreground: 213 20% 45%;  /* Muted text */
+
+    --border: 147 20% 85%;            /* Soft green borders */
+    --input: 0 0% 100%;               /* White inputs */
+    --ring: 147 50% 36%;              /* Primary ring color */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(147 50% 36% / 0.9), hsl(39 100% 64% / 0.8));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(147 33% 97%));
+    --gradient-accent: linear-gradient(135deg, hsl(39 100% 64%), hsl(39 100% 55%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(147 50% 36% / 0.1);
+    --shadow-medium: 0 8px 30px hsl(147 50% 36% / 0.15);
+    --shadow-strong: 0 12px 40px hsl(147 50% 36% / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Typography */
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Hero Section */
+  .hero-overlay {
+    background: var(--gradient-hero);
+  }
+
+  /* Custom Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  /* Cards */
+  .card-gradient {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:scale-105;
+  }
+
+  /* Stats Cards */
+  .stat-card {
+    @apply bg-white p-6 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+
+  /* Feature Cards */
+  .feature-card {
+    @apply bg-white p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+
+  /* Dashboard Elements */
+  .dashboard-card {
+    @apply bg-white p-6 rounded-xl shadow-md border border-border;
+  }
+
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive utilities */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

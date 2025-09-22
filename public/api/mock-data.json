@@ -1,0 +1,145 @@
+{
+  "predictions": [
+    {
+      "id": 1,
+      "crop": "rice",
+      "location": "Bihar",
+      "predictedYield": 4.2,
+      "confidence": 94,
+      "season": "Kharif 2024",
+      "factors": {
+        "weather": "Favorable monsoon patterns",
+        "soil": "Adequate nitrogen levels",
+        "pest": "Low risk detected"
+      },
+      "recommendations": [
+        "Maintain current irrigation schedule",
+        "Apply potassium fertilizer in week 3",
+        "Monitor for brown plant hopper"
+      ]
+    },
+    {
+      "id": 2,
+      "crop": "wheat",
+      "location": "Punjab", 
+      "predictedYield": 5.8,
+      "confidence": 96,
+      "season": "Rabi 2024",
+      "factors": {
+        "weather": "Optimal temperature range",
+        "soil": "High organic matter content",
+        "pest": "Minimal threat"
+      },
+      "recommendations": [
+        "Reduce water by 10% in final growth stage",
+        "Apply fungicide preventively",
+        "Harvest in early morning for best quality"
+      ]
+    },
+    {
+      "id": 3,
+      "crop": "sugarcane",
+      "location": "Odisha",
+      "predictedYield": 78.5,
+      "confidence": 91,
+      "season": "Annual 2024",
+      "factors": {
+        "weather": "Adequate rainfall distribution",
+        "soil": "Good drainage observed",
+        "pest": "Moderate borer infestation risk"
+      },
+      "recommendations": [
+        "Install pheromone traps for borer control",
+        "Increase earthing up frequency",
+        "Monitor sugar content weekly"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": 1,
+      "type": "irrigation",
+      "priority": "high",
+      "title": "Optimize Irrigation Schedule",
+      "description": "Based on weather forecast and soil moisture data, adjust your irrigation timing to save 15% water while maintaining yield.",
+      "cropType": "rice",
+      "savings": "15% water reduction",
+      "yieldImpact": "+3%"
+    },
+    {
+      "id": 2,
+      "type": "fertilizer",
+      "priority": "medium", 
+      "title": "Nutrient Management Plan",
+      "description": "Soil analysis indicates potassium deficiency. Apply recommended fertilizer to improve crop resistance and yield quality.",
+      "cropType": "wheat",
+      "savings": "₹2,000 per acre",
+      "yieldImpact": "+8%"
+    },
+    {
+      "id": 3,
+      "type": "pest_control",
+      "priority": "urgent",
+      "title": "Early Pest Detection Alert",
+      "description": "Satellite imagery shows early signs of pest activity in the northern section. Immediate action recommended.",
+      "cropType": "sugarcane",
+      "savings": "Prevent 20% crop loss",
+      "yieldImpact": "Maintain expected yield"
+    }
+  ],
+  "weather": {
+    "current": {
+      "temperature": 28,
+      "humidity": 72,
+      "rainfall": 0,
+      "windSpeed": 12,
+      "condition": "Partly Cloudy"
+    },
+    "forecast": [
+      {
+        "date": "2024-01-15",
+        "temp_max": 32,
+        "temp_min": 18,
+        "rainfall": 0,
+        "condition": "Sunny"
+      },
+      {
+        "date": "2024-01-16", 
+        "temp_max": 30,
+        "temp_min": 16,
+        "rainfall": 5,
+        "condition": "Light Rain"
+      },
+      {
+        "date": "2024-01-17",
+        "temp_max": 29,
+        "temp_min": 17,
+        "rainfall": 12,
+        "condition": "Moderate Rain"
+      }
+    ]
+  },
+  "cropHealth": {
+    "overall_score": 85,
+    "areas": [
+      {
+        "name": "Field A - Rice",
+        "health": 92,
+        "issues": [],
+        "status": "Excellent"
+      },
+      {
+        "name": "Field B - Wheat", 
+        "health": 78,
+        "issues": ["Minor nutrient deficiency"],
+        "status": "Good"
+      },
+      {
+        "name": "Field C - Sugarcane",
+        "health": 85,
+        "issues": ["Pest activity detected"],
+        "status": "Monitor"
+      }
+    ]
+  }
+}
