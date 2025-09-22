@@ -126,14 +126,16 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                   )
                 )}
                 <div className="pt-2 border-t border-border">
-                  <a
-                href="https://farmsevak.streamlit.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary px-4 py-2 rounded-lg text-white font-medium transition-transform hover:scale-105"
-              ></a>
-                  <Button className="btn-primary w-full">🤖SevakBot</Button>
-                </div>
+  <a
+    href="https://farmsevak.streamlit.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn-primary px-4 py-2 rounded-lg text-white font-medium transition-transform hover:scale-105 inline-block text-center w-full"
+  >
+    🤖 SevakBot
+  </a>
+</div>
+
               </div>
             </div>
           )}
