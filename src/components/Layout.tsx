@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Linkedin, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import farmSevakLogo from '../assets/FarmSevak11.jpg'; 
+
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,11 +30,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <img
-                src="src/assets/FarmSevak11.jpg"
+             <img
+                src={farmSevakLogo}
                 alt="FarmSevak Logo"
                 className="w-10 h-10 rounded-lg object-cover"
               />
+
+
               <span className="font-poppins font-bold text-xl text-foreground">
                 FarmSevak
               </span>
